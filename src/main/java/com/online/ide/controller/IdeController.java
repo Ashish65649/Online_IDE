@@ -17,11 +17,6 @@ import com.online.ide.execute.ExecuteCode;
 @CrossOrigin
 class IdeController {
 	
-	@GetMapping(value = "/name")
-	public String getName() {
-		return "My name is Ashish Ranjan" ;
-	}
-	
 	@PostMapping(value = "/submit" , consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
 	public Output getCodeFromBrowser(@RequestBody CodeRequest codeReq) throws Exception {
 		
