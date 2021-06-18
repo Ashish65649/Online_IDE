@@ -25,7 +25,6 @@ public class ExecuteCode {
             connection.setDoOutput(true);
             connection.setRequestMethod("POST");
             connection.setRequestProperty("Content-Type", "application/json");  
-            
 
     		Gson gson = new Gson();
     		
@@ -38,6 +37,10 @@ public class ExecuteCode {
     		input.setStdin(codeReq.getStdin());
     		
     		String str = gson.toJson(input);
+    		
+//    		String input = "{\"clientId\": \"" + clientId + "\",\"clientSecret\":\"" + clientSecret + "\",\"script\":\"" + codeReq.getScript() +
+//    	            "\",\"language\":\"" + codeReq.getLanguage() + "\",\"versionIndex\":\"" + codeReq.getVersionIndex() + "\"} ";
+
     		
     		System.out.println(str);
     	
