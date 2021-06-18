@@ -14,9 +14,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBoot-1</name>
 	<description>Backend for online ide</description>
+	
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
+	
 	<dependencies>
 
 		<dependency>
