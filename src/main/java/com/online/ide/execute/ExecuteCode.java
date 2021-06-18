@@ -28,24 +28,24 @@ public class ExecuteCode {
 
     		Gson gson = new Gson();
     		
-    		Input input = new Input();
-    		input.setClientId(clientId);
-    		input.setClientSecret(clientSecret);
-    		input.setLanguage(codeReq.getLanguage());
-    		input.setVersionIndex(codeReq.getVersionIndex());
-    		input.setScript(codeReq.getScript());
-    		input.setStdin(codeReq.getStdin());
+//    		Input input = new Input();
+//    		input.setClientId(clientId);
+//    		input.setClientSecret(clientSecret);
+//    		input.setLanguage(codeReq.getLanguage());
+//    		input.setVersionIndex(codeReq.getVersionIndex());
+//    		input.setScript(codeReq.getScript());
+//    		input.setStdin(codeReq.getStdin());
     		
-    		String str = gson.toJson(input);
+//    		String str = gson.toJson(input);
     		
-//    		String input = "{\"clientId\": \"" + clientId + "\",\"clientSecret\":\"" + clientSecret + "\",\"script\":\"" + codeReq.getScript() +
-//    	            "\",\"language\":\"" + codeReq.getLanguage() + "\",\"versionIndex\":\"" + codeReq.getVersionIndex() + "\"} ";
+    		String input = "{\"clientId\": \"" + clientId + "\",\"clientSecret\":\"" + clientSecret + "\",\"script\":\"" + codeReq.getScript() +
+    	            "\",\"language\":\"" + codeReq.getLanguage() + "\",\"versionIndex\":\"" + codeReq.getVersionIndex() + "\"} ";
 
     		
-    		System.out.println(str);
+    		System.out.println(input);
     	
             OutputStream outputStream = connection.getOutputStream();
-            outputStream.write(str.getBytes());
+            outputStream.write(input.getBytes());
             outputStream.flush();
 
             if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
