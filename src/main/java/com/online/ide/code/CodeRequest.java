@@ -42,4 +42,9 @@ public class CodeRequest {
 		this.versionIndex = versionIndex;
 	}
 	
+	@Override
+	public String toString() {
+		return "CodeRequest [script=" + script + ", language=" + language + ", versionIndex=" + versionIndex
+				+ ", stdin=" + stdin + "]";
+	}
 }
