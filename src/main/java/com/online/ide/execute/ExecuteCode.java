@@ -37,12 +37,6 @@ public class ExecuteCode {
     		input.setStdin(codeReq.getStdin());
     		
     		String str = gson.toJson(input);
-    		
-//    		String input = "{\"clientId\": \"" + clientId + "\",\"clientSecret\":\"" + clientSecret + "\",\"script\":\"" + codeReq.getScript() +
-//    	            "\",\"language\":\"" + codeReq.getLanguage() + "\",\"versionIndex\":\"" + codeReq.getVersionIndex() + "\"} ";
-
-    		
-//    		System.out.println(input);
     	
             OutputStream outputStream = connection.getOutputStream();
             outputStream.write(str.getBytes());
