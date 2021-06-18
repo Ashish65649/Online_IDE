@@ -2,7 +2,6 @@ package com.online.ide.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,8 +18,6 @@ class IdeController {
 	
 	@PostMapping(value = "/submit" , consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
 	public Output getCodeFromBrowser(@RequestBody CodeRequest codeReq) throws Exception {
-		
-		System.out.println("I am already here...");
 		
 		ExecuteCode exe = new ExecuteCode();
 		String finalResponse = exe.execute(codeReq);
