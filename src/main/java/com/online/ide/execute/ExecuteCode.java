@@ -37,8 +37,6 @@ public class ExecuteCode {
     		input.setStdin(codeReq.getStdin());
     		
     		String str = gson.toJson(input);
-    		
-    		System.out.println(str);
     	
             OutputStream outputStream = connection.getOutputStream();
             outputStream.write(str.getBytes());

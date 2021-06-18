@@ -23,11 +23,6 @@ class IdeController {
 		String finalResponse = exe.execute(codeReq);
 		Gson gson = new Gson();
 		Output output = gson.fromJson(finalResponse, Output.class);
-//		Output out = new Output();
-//		out.setOutput(codeReq.getScript());
-//		out.setCpuTime("1300");
-//		out.setStatusCode("200");
-//		out.setMemory("59522");
 		return output ;	
 	
 	}
