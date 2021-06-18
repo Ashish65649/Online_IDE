@@ -14,16 +14,22 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBoot-1</name>
 	<description>Backend for online ide</description>
-	
+
 	<properties>
 		<java.version>8</java.version>
 	</properties>
-	
+
 	<dependencies>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.heroku.api</groupId>
+			<artifactId>heroku-json-gson</artifactId>
+			<version>0.45</version>
 		</dependency>
 
 		<dependency>

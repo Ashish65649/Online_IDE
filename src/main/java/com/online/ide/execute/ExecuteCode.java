@@ -9,6 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.google.gson.Gson;
+import com.heroku.api.parser.GsonParser;
 import com.online.ide.code.CodeRequest;
 import com.online.ide.code.Input;
 
@@ -27,6 +28,7 @@ public class ExecuteCode {
             connection.setRequestProperty("Content-Type", "application/json");  
 
     		Gson gson = new Gson();
+    		GsonParser parser = new GsonParser();
     		
     		Input input = new Input();
     		input.setClientId(clientId);
@@ -36,10 +38,13 @@ public class ExecuteCode {
     		input.setScript(codeReq.getScript());
     		input.setStdin(codeReq.getStdin());
     		
-    		String str = gson.toJson(input);
+    		String jsonData = parser.encode(input);
+    		System.out.println(jsonData);
+    		
+//    		String str = gson.toJson(input);
     	
             OutputStream outputStream = connection.getOutputStream();
-            outputStream.write(str.getBytes());
+            outputStream.write(jsonData.getBytes());
             outputStream.flush();
 
             if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
