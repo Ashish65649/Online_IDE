@@ -20,6 +20,8 @@ class IdeController {
 	@PostMapping(value = "/submit" , consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
 	public Output getCodeFromBrowser(@RequestBody CodeRequest codeReq) throws Exception {
 		
+		System.out.println("I am already here...");
+		
 		ExecuteCode exe = new ExecuteCode();
 		String finalResponse = exe.execute(codeReq);
 		Gson gson = new Gson();
