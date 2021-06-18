@@ -21,9 +21,13 @@ class IdeController {
 		return "This is the default route";
 	}
 	
+	@RequestMapping(value = "/name" , method = RequestMethod.GET)
+	public String getMyName() {
+		return "Ashish is the name of this man" ;
+	}
+	
 	@RequestMapping(value = "/submit" , method = RequestMethod.POST , consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.TEXT_PLAIN_VALUE)
 	public String getCodeFromBrowser(@RequestBody CodeRequest codeReq) throws Exception {
-		
 		ExecuteCode exe = new ExecuteCode();
 		String finalResponse = exe.execute(codeReq);		
 		return finalResponse ;
