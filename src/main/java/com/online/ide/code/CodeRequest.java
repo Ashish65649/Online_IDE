@@ -8,7 +8,6 @@ public class CodeRequest {
 	private String stdin ;
 	
 	public String getStdin() {
-		// ashish
 		return stdin;
 	}
 
