@@ -19,7 +19,7 @@ public class ExecuteCode {
 		String finalResponse = null ;
 		try {
 			final String clientId = "40c9622fc3b9d33ce6aaa26f3c23e0a7" ;
-			final String clientSecret = "8e7a7fd4dbbbdc7ecf0528dbada9a03bb1ace5c230e781f8402e42488e28902a" ;
+			final String clientSecret = "9369d267c842e76553984da224a2f95637d7bbd5176b4b8b61664661d8ea93bd" ;
             URL url = new URL("https://api.jdoodle.com/v1/execute");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setDoOutput(true);
