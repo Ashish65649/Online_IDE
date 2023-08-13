@@ -12,7 +12,6 @@ import com.online.ide.code.Output;
 import com.online.ide.execute.ExecuteCode;
 
 @RestController
-@CrossOrigin
 class IdeController {
 	
 	@PostMapping(value = "/submit" , consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
