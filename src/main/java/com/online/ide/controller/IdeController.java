@@ -25,4 +25,10 @@ class IdeController {
 		return output ;	
 	
 	}
+
+	@GetMapping(value = "/")
+	public String getData() {
+		System.out.println("ashish is running code");
+		return "This is dummy response";
+	}
 }
